@@ -31,6 +31,17 @@ def contains_two_terms(numbers, target):
       else:
         print("("+str(n)+","+str(target-n)+")")
 
+# additional notes and comments
+#
+# What is the run time of this algorith?
+# The short answer is O(n). 
+# The long answer:
+# in this method we start by creating a HashMap by iterating over the list of numbers which is
+# O(n) since we need to touch every element in the list and the insertion and lookup in the HashMap
+# take constant time. Similarly when we iterate over the list of numbers in the second for loop
+# we do a constant number of lookup in the HashMap which each take constant time, therefire
+# the second loop also takes linear time. Thus, both for loop together make up for a runtime complexity
+# of O(n)
 
 numbers = map(int,sys.argv[1:])
 contains_two_terms(numbers[1:],numbers[0])
