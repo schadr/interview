@@ -66,3 +66,10 @@ def create_current_network(request_friend, approve_friend, reject_friend, remove
 # as the minimum complexity. To build the dictionary of dictionaries we need to again iterate
 # over both lists once while inserting and removing from the dictionary of dictionaries takes
 # constant time
+#
+# the space requirements of this algorithm currently is linear in the size of the list since
+# we are reading the list, furhtermore it is worst case linear in both lists because we are
+# creatign a sparse matrix that can worst case contain all the pairs in the lists. One follow
+# up question that was asked is what would you do in case the lists are gigantic. One possible
+# solution would be to use a data base, this then enables to use sql quesries to replace the for
+# loops with joins and thus generate the networks using the data base tables.
